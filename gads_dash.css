@@ -1,0 +1,86 @@
+.adsensetable{
+	font-family:Arial, Verdana; 
+	font-weight:bold; 
+	font-size:10pt;
+	width: 90%;
+}
+.gadsbutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #00DB6D;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #00DB6D;
+	box-shadow:inset 0px 1px 0px 0px #00DB6D;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #00C666), color-stop(1, #00A854) );
+	background:-moz-linear-gradient( center top, #00C666 5%, #00A854 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\'#00C666\', endColorstr=\'#00A854\');
+	background-color:#00C666;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #00C45E;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:11px;
+	font-weight:bold;
+	padding:4px 3%;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #00873F;
+}
+.gadsbutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #00A854), color-stop(1, #00C666) );
+	background:-moz-linear-gradient( center top, #00A854 5%, #00C666 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\'#00A854\', endColorstr=\'#00C666\');
+	background-color:#00A854;
+}
+.gadsbutton:active {
+	position:relative;
+	top:1px;
+}
+a.adsensetable:link { 
+	color: #FFFFC6; 
+	text-decoration: none;
+}
+a.adsensetable:visited {
+	color: #FFFFC6; 
+	text-decoration: none;
+}
+a.adsensetable:hover {
+	color: #FAFF00; 
+	text-decoration: none;
+}
+
+#adsense_chart1_div{
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+table.adsensetable {
+	-moz-box-shadow:inset 0px 1px 0px 0px #00DB6D;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #00DB6D;
+	box-shadow:inset 0px 1px 0px 0px #00DB6D;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #00C666), color-stop(1, #00A854) );
+	background:-moz-linear-gradient( center top, #00C666 5%, #00A854 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\'#00C666\', endColorstr=\'#00A854\');
+	background-color:#00C666;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #00C45E;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:11px;
+	font-weight:bold;
+	padding:2px 2px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #00873F;
+}
+
+.gads-title{
+    float:left;
+    margin-right:10px;
+    margin-top:2px;
+}
+.gads-desc{
+	font-size:1em;
+}

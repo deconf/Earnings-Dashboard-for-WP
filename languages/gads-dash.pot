@@ -1,0 +1,342 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Google Adsense Dashboard for WP\n"
+"POT-Creation-Date: 2014-07-24 08:25+0200\n"
+"PO-Revision-Date: 2014-07-24 08:25+0200\n"
+"Last-Translator: Alin Marcu <admin@deconf.com>\n"
+"Language-Team: Deconf <admin@deconf.com>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.6\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ../.\n"
+
+#: .././functions.php:16
+msgid "For further help and support go to"
+msgstr ""
+
+#: .././functions.php:16
+msgid "Deconf Help Center"
+msgstr ""
+
+#: .././functions.php:88
+msgid "Ask an admin to authorize this Application"
+msgstr ""
+
+#: .././functions.php:92
+msgid "Use this link to get your access code:"
+msgstr ""
+
+#: .././functions.php:92
+msgid "Get Access Code"
+msgstr ""
+
+#: .././functions.php:94
+msgid "Access Code:"
+msgstr ""
+
+#: .././functions.php:95
+msgid "Save Access Code"
+msgstr ""
+
+#: .././gads_dash.php:54
+msgid "Settings"
+msgstr ""
+
+#: .././gads_dash.php:392
+msgid "Channel"
+msgstr ""
+
+#: .././gads_dash.php:392 .././gads_dash.php:415
+msgid "Earnings"
+msgstr ""
+
+#: .././gads_dash.php:392 .././gads_dash.php:415
+msgid "CPC"
+msgstr ""
+
+#: .././gads_dash.php:392 .././gads_dash.php:415
+msgid "Clicks"
+msgstr ""
+
+#: .././gads_dash.php:392
+msgid "Views"
+msgstr ""
+
+#: .././gads_dash.php:392 .././gads_dash.php:415
+msgid "CTR"
+msgstr ""
+
+#: .././gads_dash.php:392 .././gads_dash.php:415
+msgid "RPM"
+msgstr ""
+
+#: .././gads_dash.php:415
+msgid "Ad Slot"
+msgstr ""
+
+#: .././gads_dash.php:415
+msgid "Requests"
+msgstr ""
+
+#: .././gads_dash.php:436
+msgid "Today"
+msgstr ""
+
+#: .././gads_dash.php:437
+msgid "Yesterday"
+msgstr ""
+
+#: .././gads_dash.php:438
+msgid "7 Days"
+msgstr ""
+
+#: .././gads_dash.php:439
+msgid "14 Days"
+msgstr ""
+
+#: .././gads_dash.php:440
+msgid "30 Days"
+msgstr ""
+
+#: .././gads_dash.php:449
+msgid "Earnings:"
+msgstr ""
+
+#: .././gads_dash.php:451
+msgid "Views:"
+msgstr ""
+
+#: .././gads_dash.php:453
+msgid "Clicks:"
+msgstr ""
+
+#: .././gads_dash.php:457
+msgid "CPC:"
+msgstr ""
+
+#: .././gads_dash.php:459
+msgid "CTR:"
+msgstr ""
+
+#: .././gads_dash.php:461
+msgid "RPM:"
+msgstr ""
+
+#: .././gads_dash_admin.php:19
+msgid "Cleared Cache."
+msgstr ""
+
+#: .././gads_dash_admin.php:30
+msgid "Token Reseted."
+msgstr ""
+
+#: .././gads_dash_admin.php:76
+msgid "Options saved."
+msgstr ""
+
+#: .././gads_dash_admin.php:135
+msgid "Earnings Dashboard Settings"
+msgstr ""
+
+#: .././gads_dash_admin.php:146
+msgid "Google Adsense API"
+msgstr ""
+
+#: .././gads_dash_admin.php:147
+msgid "You should read/watch this step by step"
+msgstr ""
+
+#: .././gads_dash_admin.php:147
+msgid "video tutorial"
+msgstr ""
+
+#: .././gads_dash_admin.php:147
+msgid "before proceeding to authorization"
+msgstr ""
+
+#: .././gads_dash_admin.php:151
+msgid " use your own API Project credentials"
+msgstr ""
+
+#: .././gads_dash_admin.php:157
+msgid "API Key:"
+msgstr ""
+
+#: .././gads_dash_admin.php:162
+msgid "Client ID:"
+msgstr ""
+
+#: .././gads_dash_admin.php:167
+msgid "Client Secret:"
+msgstr ""
+
+#: .././gads_dash_admin.php:178
+msgid "Clear Authorization"
+msgstr ""
+
+#: .././gads_dash_admin.php:180 .././gads_dash_admin.php:188
+msgid "Clear Cache"
+msgstr ""
+
+#: .././gads_dash_admin.php:186
+msgid "Authorize Application"
+msgstr ""
+
+#: .././gads_dash_admin.php:193
+msgid ""
+"(the rest of the settings will show up after completing the authorization "
+"process)"
+msgstr ""
+
+#: .././gads_dash_admin.php:202 .././gads_dash_admin.php:318
+msgid "Setup Tutorial & Demo"
+msgstr ""
+
+#: .././gads_dash_admin.php:214 .././gads_dash_admin.php:330
+msgid "Support & Reviews"
+msgstr ""
+
+#: .././gads_dash_admin.php:222 .././gads_dash_admin.php:338
+msgid "You can find support on"
+msgstr ""
+
+#: .././gads_dash_admin.php:222 .././gads_dash_admin.php:338
+msgid "DeConf Help Center"
+msgstr ""
+
+#: .././gads_dash_admin.php:229 .././gads_dash_admin.php:345
+msgid "Your feedback and review are both important,"
+msgstr ""
+
+#: .././gads_dash_admin.php:229 .././gads_dash_admin.php:345
+msgid "rate this plugin"
+msgstr ""
+
+#: .././gads_dash_admin.php:234 .././gads_dash_admin.php:350
+msgid "Further Reading"
+msgstr ""
+
+#: .././gads_dash_admin.php:241 .././gads_dash_admin.php:357
+msgid "Other"
+msgstr ""
+
+#: .././gads_dash_admin.php:241 .././gads_dash_admin.php:357
+msgid "WordPress Plugins"
+msgstr ""
+
+#: .././gads_dash_admin.php:241 .././gads_dash_admin.php:357
+msgid "written by the same author"
+msgstr ""
+
+#: .././gads_dash_admin.php:247 .././gads_dash_admin.php:363
+msgid "Web Analytics"
+msgstr ""
+
+#: .././gads_dash_admin.php:247 .././gads_dash_admin.php:363
+msgid "service with visitors tracking at IP level."
+msgstr ""
+
+#: .././gads_dash_admin.php:257
+msgid "Access Level"
+msgstr ""
+
+#: .././gads_dash_admin.php:258
+msgid "View Access Level: "
+msgstr ""
+
+#: .././gads_dash_admin.php:261
+msgid "Administrators"
+msgstr ""
+
+#: .././gads_dash_admin.php:263
+msgid "Editors"
+msgstr ""
+
+#: .././gads_dash_admin.php:265
+msgid "Authors"
+msgstr ""
+
+#: .././gads_dash_admin.php:267
+msgid "Contributors"
+msgstr ""
+
+#: .././gads_dash_admin.php:271
+msgid "Additional Settings"
+msgstr ""
+
+#: .././gads_dash_admin.php:275
+msgid " show Custom Channels performance report"
+msgstr ""
+
+#: .././gads_dash_admin.php:278
+msgid " show Ad Units performance report"
+msgstr ""
+
+#: .././gads_dash_admin.php:279
+msgid "CSS Settings: "
+msgstr ""
+
+#: .././gads_dash_admin.php:281
+msgid "Green Theme"
+msgstr ""
+
+#: .././gads_dash_admin.php:282
+msgid "Light Theme"
+msgstr ""
+
+#: .././gads_dash_admin.php:286
+msgid "Cache Settings"
+msgstr ""
+
+#: .././gads_dash_admin.php:287
+msgid "Cache Time: "
+msgstr ""
+
+#: .././gads_dash_admin.php:289
+msgid "15 minutes"
+msgstr ""
+
+#: .././gads_dash_admin.php:290
+msgid "30 minutes"
+msgstr ""
+
+#: .././gads_dash_admin.php:291
+msgid "1 hour"
+msgstr ""
+
+#: .././gads_dash_admin.php:292
+msgid "2 hours"
+msgstr ""
+
+#: .././gads_dash_admin.php:296
+msgid "Google Adsense Time Zone"
+msgstr ""
+
+#: .././gads_dash_admin.php:298
+msgid "Time Zone: "
+msgstr ""
+
+#: .././gads_dash_admin.php:300
+msgid "Billing time zone (PST)"
+msgstr ""
+
+#: .././gads_dash_admin.php:301
+msgid "Account time zone"
+msgstr ""
+
+#: .././gads_dash_admin.php:307
+msgid "Update Options"
+msgstr ""
+
+#~ msgid ""
+#~ " (watch this <a href='http://www.deconf.com/en/projects/google-analytics-"
+#~ "dashboard-for-wordpress/' target='_blank'>Step by step video tutorial</a>)"
+#~ msgstr ""
+#~ " (watch this <a href='http://www.deconf.com/en/projects/google-analytics-"
+#~ "dashboard-for-wordpress/' target='_blank'>Step by step video tutorial</a>)"
