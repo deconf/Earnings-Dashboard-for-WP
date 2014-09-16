@@ -5,7 +5,6 @@
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
-
 function gads_dash_safe_get($key) {
 	if (array_key_exists ( $key, $_POST )) {
 		return $_POST [$key];
@@ -13,7 +12,7 @@ function gads_dash_safe_get($key) {
 	return false;
 }
 function gads_dash_pretty_error($e) {
-	return '<p>'.esc_html($e->getMessage()).'</p><p>'. __('For further help and support go to', 'gads-dash' ).' <a href="http://deconf.com/ask/" target="_blank">' . __ ( "Deconf Help Center", 'gads-dash' ) . '</a></p>';
+	return '<p>' . esc_html ( $e->getMessage () ) . '</p><p>' . __ ( 'For further help and support go to', 'gads-dash' ) . ' <a href="http://deconf.com/ask/" target="_blank">' . __ ( "Deconf Help Center", 'gads-dash' ) . '</a></p>';
 }
 class AdSenseAuth {
 	protected $client;
@@ -25,7 +24,7 @@ class AdSenseAuth {
 		if (version_compare ( PHP_VERSION, '5.3.0' ) >= 0) {
 			require 'vendor/autoload.php';
 		} else {
-			set_include_path ( dirname ( __FILE__ ).'/src/'. PATH_SEPARATOR . get_include_path () );
+			set_include_path ( dirname ( __FILE__ ) . '/src/' . PATH_SEPARATOR . get_include_path () );
 			// Include GAPI client
 			if (! class_exists ( 'Google_Client' )) {
 				require_once 'Google/Client.php';

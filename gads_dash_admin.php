@@ -297,9 +297,9 @@ if (is_rtl ()) {
 
 	<p><?php _e("Time Zone: ", 'gads-dash' ); ?>
 	<select id="gads_dash_timezone" name="gads_dash_timezone">
-		<option value="0" <?php selected($gads_dash_timezone, 0);?>><?php _e("Billing time zone (PST)", 'gads-dash');?></option>
-		<option value="1" <?php selected($gads_dash_timezone, 1);?>><?php _e("Account time zone", 'gads-dash');?></option>
-	</select>
+			<option value="0" <?php selected($gads_dash_timezone, 0);?>><?php _e("Billing time zone (PST)", 'gads-dash');?></option>
+			<option value="1" <?php selected($gads_dash_timezone, 1);?>><?php _e("Account time zone", 'gads-dash');?></option>
+		</select>
 	</p>
 
 	<p class="submit">
