@@ -1,10 +1,10 @@
 === Google Adsense Dashboard ===
 Contributors: deconf
-Donate link: http://deconf.com/donate/
+Donate link: https://deconf.com/donate/
 Tags: adsense, google, dashboard, google adsense, google adsense dashboard, adsense dashboard, earnings
 Requires at least: 2.8
 Tested up to: 3.5.2
-Stable tag: 2.2
+Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Earnings Dashboard will display your Google Adsense revenue and related reports 
 
 == Description ==
 
-Using a widget, [Earnings Dashboard](http://deconf.com/earnings-dashboard-google-adsense-wordpress/) displays detailed Google AdSense statistics and reports, on your website, under your administration panel. 
+Using a widget, [Earnings Dashboard](https://deconf.com/earnings-dashboard-google-adsense-wordpress/) displays detailed Google AdSense statistics and reports, on your website, under your administration panel. 
 
 = Earnings Dashboard for Google Adsense™ main features =
 
@@ -34,9 +34,8 @@ Using this plugin your data is collected in a fast and secure manner because Ear
 
 = Further reading and info =
 
-* My [Earnings Dashboard](http://deconf.com/earnings-dashboard-google-adsense-wordpress/) homepage
-* Other [WordPress Plugins](http://deconf.com/wordpress/) by same author
-* [Earnings Dashboard](http://deconf.com/ask/) translations and support 
+* My [Earnings Dashboard](https://deconf.com/earnings-dashboard-google-adsense-wordpress/) homepage
+* Other [WordPress Plugins](https://deconf.com/wordpress/) by same author
 
 == Installation ==
 
@@ -46,17 +45,17 @@ Using this plugin your data is collected in a fast and secure manner because Ear
 4. Authorize the application using the 'Authorize Application' button
 5. Go back to the plugin configuration page, which is located under Settings -> Earnings Dashboard to update the final settings.
 
-A step by step setup tutorial is available here [Earnings Dashboard for Google Adsense - video tutorial](http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/)
+A step by step setup tutorial is available here [Earnings Dashboard for Google Adsense - video tutorial](https://deconf.com/earnings-dashboard-google-adsense-wordpress/)
 
 == Frequently Asked Questions == 
 
 = Where can I find my Google API Key, Client Secret and Client ID? =
 
-Follow this step by step video tutorial: [Earnings Dashboard for Google Adsense](http://www.deconf.com/en/projects/google-adsense-dashboard-for-wordpress/)
+Follow this step by step video tutorial: [Earnings Dashboard for Google Adsense](https://deconf.com/earnings-dashboard-google-adsense-wordpress/)
 
 = More Questions? =
 
-A dedicated section for Wordpress Plugins is available here: [Wordpress Plugins Support](http://forum.deconf.com/en/wordpress-plugins-f182/)
+A dedicated section for Wordpress Plugins is available here: [Wordpress Plugins Support](https://deconf.com/ask)
 
 == Screenshots ==
 
@@ -69,6 +68,11 @@ A dedicated section for Wordpress Plugins is available here: [Wordpress Plugins 
 This plugin it's released under the GPLv2, you can use it free of charge on your personal or commercial website.
 
 == Changelog ==
+
+= v2.2.1 =
+- Enhancement: GAPI library update
+- Enhancement: main chart optimization
+- Enhancement: css tweaks and fixes 
 
 = v2.2 =
 - bugfix: notices and warnings in main dashboard

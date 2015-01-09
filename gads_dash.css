@@ -2,7 +2,7 @@
 	font-family:Arial, Verdana; 
 	font-weight:bold; 
 	font-size:10pt;
-	width: 90%;
+	width: 98%;
 }
 .gadsbutton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #00DB6D;
@@ -49,7 +49,7 @@ a.adsensetable:hover {
 }
 
 #adsense_chart1_div{
-	width: 90%;
+	width: 98%;
 	display: block;
 	margin: 0 auto;
 }
@@ -76,11 +76,11 @@ table.adsensetable {
 	text-shadow:1px 1px 0px #00873F;
 }
 
-.gads-title{
+.deconf-title{
     float:left;
     margin-right:10px;
     margin-top:2px;
 }
-.gads-desc{
+.deconf-desc{
 	font-size:1em;
 }

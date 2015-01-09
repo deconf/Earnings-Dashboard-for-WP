@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Google Adsense Dashboard
- * Plugin URI: http://deconf.com 
+ * Plugin URI: https://deconf.com 
  * Description: Earnings Dashboard will display Google Adsense earnings and statistics into Admin Dashboard.
  * Author: Alin Marcu 
- * Version: 2.2 
- * Author URI: http://deconf.com
+ * Version: 2.2.1 
+ * Author URI: https://deconf.com
  */
 
 /*
@@ -35,6 +35,7 @@ add_action ( 'admin_enqueue_scripts', 'gads_dash_admin_enqueue_styles' );
 add_action ( 'plugins_loaded', 'gads_dash_init' );
 add_filter ( "plugin_action_links_$plugin", 'gads_dash_settings_link' );
 function gads_dash_admin_enqueue_styles($hook) {
+    
 	$valid_hooks = array (
 			'settings_page_Earnings_Dashboard' 
 	);
@@ -365,14 +366,14 @@ function gads_dash_content() {
 		var data = google.visualization.arrayToDataTable([' . "
 		  ['Date', '" . $title . "']," . $gads_chart1_data . "  
 		]);
-
+		      
 		var options = {
 		  legend: {position: 'none'},	
-		  pointSize: 3," . $css . "
-		  title: '" . $title . "',titleTextStyle: {color: '#000000'},
-		  chartArea: {width: '90%'},
-		  vAxis: {minValue: 0},
-		  hAxis: { title: 'Date',  titleTextStyle: {color: '" . $colors . "'}, showTextEvery: 5}
+		  pointSize: 3,".$css."
+          title: '".$title."',
+       	  chartArea: {width: '99%',height: '90%'},
+	      vAxis: { textPosition: 'in', minValue: 0},
+	      hAxis: { textPosition: 'none' }
 		};
 
 		var chart = new google.visualization.AreaChart(document.getElementById('adsense_chart1_div'));
