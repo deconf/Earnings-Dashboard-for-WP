@@ -9,11 +9,9 @@
 	-moz-box-shadow: inset 0px 1px 0px 0px #00DB6D;
 	-webkit-box-shadow: inset 0px 1px 0px 0px #00DB6D;
 	box-shadow: inset 0px 1px 0px 0px #00DB6D;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #00C666
-		), color-stop(1, #00A854));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #00C666), color-stop(1, #00A854));
 	background: -moz-linear-gradient(center top, #00C666 5%, #00A854 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=\'
-		#00C666\', endColorstr=\' #00A854\');
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=\' #00C666\', endColorstr=\' #00A854\');
 	background-color: #00C666;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -30,11 +28,9 @@
 }
 
 .gadsbutton:hover {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #00A854
-		), color-stop(1, #00C666));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #00A854), color-stop(1, #00C666));
 	background: -moz-linear-gradient(center top, #00A854 5%, #00C666 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=\'
-		#00A854\', endColorstr=\' #00C666\');
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=\' #00A854\', endColorstr=\' #00C666\');
 	background-color: #00A854;
 }
 
@@ -68,11 +64,9 @@ table.adsensetable {
 	-moz-box-shadow: inset 0px 1px 0px 0px #00DB6D;
 	-webkit-box-shadow: inset 0px 1px 0px 0px #00DB6D;
 	box-shadow: inset 0px 1px 0px 0px #00DB6D;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #00C666
-		), color-stop(1, #00A854));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #00C666), color-stop(1, #00A854));
 	background: -moz-linear-gradient(center top, #00C666 5%, #00A854 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=\'
-		#00C666\', endColorstr=\' #00A854\');
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=\' #00C666\', endColorstr=\' #00A854\');
 	background-color: #00C666;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
