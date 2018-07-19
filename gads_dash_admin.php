@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Author: Alin Marcu
  * Author URI: https://deconf.com
@@ -31,45 +32,45 @@ if ( isset( $_POST['Reset'] ) && isset( $_POST['gads_security'] ) && wp_verify_n
     </p>
 </div>
 <?php
-} else 
+} else
 	if ( gads_dash_safe_get( 'gads_dash_hidden' ) == 'Y' && isset( $_POST['gads_security'] ) && wp_verify_nonce( $_POST['gads_security'], 'gads_dash_form' ) ) {
 		// Form data sent
 		$apikey = gads_dash_safe_get( 'gads_dash_apikey' );
 		if ( $apikey ) {
 			update_option( 'gads_dash_apikey', sanitize_text_field( $apikey ) );
 		}
-		
+
 		$clientid = gads_dash_safe_get( 'gads_dash_clientid' );
 		if ( $clientid ) {
 			update_option( 'gads_dash_clientid', sanitize_text_field( $clientid ) );
 		}
-		
+
 		$clientsecret = gads_dash_safe_get( 'gads_dash_clientsecret' );
 		if ( $clientsecret ) {
 			update_option( 'gads_dash_clientsecret', sanitize_text_field( $clientsecret ) );
 		}
-		
+
 		$dashaccess = gads_dash_safe_get( 'gads_dash_access' );
 		update_option( 'gads_dash_access', $dashaccess );
-		
+
 		$gads_dash_channels = gads_dash_safe_get( 'gads_dash_channels' );
 		update_option( 'gads_dash_channels', $gads_dash_channels );
-		
+
 		$gads_dash_ads = gads_dash_safe_get( 'gads_dash_ads' );
 		update_option( 'gads_dash_ads', $gads_dash_ads );
-		
+
 		$gads_dash_style = gads_dash_safe_get( 'gads_dash_style' );
 		update_option( 'gads_dash_style', $gads_dash_style );
-		
+
 		$gads_dash_cachetime = gads_dash_safe_get( 'gads_dash_cachetime' );
 		update_option( 'gads_dash_cachetime', $gads_dash_cachetime );
-		
+
 		$gads_dash_timezone = gads_dash_safe_get( 'gads_dash_timezone' );
 		update_option( 'gads_dash_timezone', (bool) $gads_dash_timezone );
-		
+
 		$gads_dash_userapi = gads_dash_safe_get( 'gads_dash_userapi' );
 		update_option( 'gads_dash_userapi', $gads_dash_userapi );
-		
+
 		if ( ! isset( $_POST['Clear'] ) and ! isset( $_POST['Reset'] ) ) {
 			?>
 <div class="updated">
@@ -79,23 +80,23 @@ if ( isset( $_POST['Reset'] ) && isset( $_POST['gads_security'] ) && wp_verify_n
 </div>
 <?php
 		}
-	} else 
+	} else
 		if ( gads_dash_safe_get( 'gads_dash_hidden' ) == 'A' && isset( $_POST['gads_security'] ) && wp_verify_nonce( $_POST['gads_security'], 'gads_dash_form' ) ) {
 			$apikey = gads_dash_safe_get( 'gads_dash_apikey' );
 			if ( $apikey ) {
 				update_option( 'gads_dash_apikey', sanitize_text_field( $apikey ) );
 			}
-			
+
 			$clientid = gads_dash_safe_get( 'gads_dash_clientid' );
 			if ( $clientid ) {
 				update_option( 'gads_dash_clientid', sanitize_text_field( $clientid ) );
 			}
-			
+
 			$clientsecret = gads_dash_safe_get( 'gads_dash_clientsecret' );
 			if ( $clientsecret ) {
 				update_option( 'gads_dash_clientsecret', sanitize_text_field( $clientsecret ) );
 			}
-			
+
 			$gads_dash_userapi = gads_dash_safe_get( 'gads_dash_userapi' );
 			update_option( 'gads_dash_userapi', $gads_dash_userapi );
 		}
@@ -142,7 +143,7 @@ if ( is_rtl() ) {
             <div class="settings-wrapper">
                 <div class="inside">
                     <form name="gads_dash_form" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
-			<?php wp_nonce_field('gads_dash_form','gads_security'); ?>  
+			<?php wp_nonce_field('gads_dash_form','gads_security'); ?>
 		<h2><?php _e( 'Google Adsense API', 'gads-dash' ); ?></h2>
                         <p><?php echo __("You should read/watch this step by step", 'gads-dash')." <a href='https://deconf.com/earnings-dashboard-google-adsense-wordpress/' target='_blank'> ". __("video tutorial")."</a> ".__("before proceeding to authorization", 'gads-dash');?></p>
                         <p>
@@ -159,7 +160,7 @@ if ( is_rtl() ) {
                         </p>
                         <p>
                             <strong><?php _e("Client Secret:", 'gads-dash');?></strong><input type="text" name="gads_dash_clientsecret" value="<?php echo esc_attr($clientsecret); ?>" size="60">
-                        </p>  
+                        </p>
 		<?php
 		}
 		?>
@@ -176,7 +177,7 @@ if ( is_rtl() ) {
 			<?php _e ( "(the rest of the settings will show up after completing the authorization process)", 'gads-dash' ); ?>
 				</div>
 <?php
-			
+
 			deconfsidebar();
 			return;
 		}
@@ -297,4 +298,4 @@ function deconfsidebar() {
         </div>
     </div>
 </div>
-<?php }?>	
+<?php }?>
