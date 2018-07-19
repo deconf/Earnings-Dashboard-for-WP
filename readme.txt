@@ -3,7 +3,7 @@ Contributors: deconf
 Donate link: https://deconf.com/donate/
 Tags: adsense, google, dashboard, google adsense, google adsense dashboard, adsense dashboard, earnings
 Requires at least: 2.8
-Tested up to: 4.4.2
+Tested up to: 4.9.7
 Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
