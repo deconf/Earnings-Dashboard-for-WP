@@ -6,7 +6,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -22,80 +22,84 @@
  */
 use google\appengine\api\app_identity\AppIdentityService;
 
-require_once realpath( dirname( __FILE__ ) . '/../../../autoload.php' );
+require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
 
 /**
  * Authentication via the Google App Engine App Identity service.
  */
-class Google_Auth_AppIdentity extends Google_Auth_Abstract {
+class Google_Auth_AppIdentity extends Google_Auth_Abstract
+{
+  const CACHE_PREFIX = "Google_Auth_AppIdentity::";
+  private $key = null;
+  private $client;
+  private $token = false;
+  private $tokenScopes = false;
 
-	const CACHE_PREFIX = "Google_Auth_AppIdentity::";
+  public function __construct(Google_Client $client, $config = null)
+  {
+    $this->client = $client;
+  }
 
-	private $key = null;
+  /**
+   * Retrieve an access token for the scopes supplied.
+   */
+  public function authenticateForScope($scopes)
+  {
+    if ($this->token && $this->tokenScopes == $scopes) {
+      return $this->token;
+    }
 
-	private $client;
+    $cacheKey = self::CACHE_PREFIX;
+    if (is_string($scopes)) {
+      $cacheKey .= $scopes;
+    } else if (is_array($scopes)) {
+      $cacheKey .= implode(":", $scopes);
+    }
 
-	private $token = false;
+    $this->token = $this->client->getCache()->get($cacheKey);
+    if (!$this->token) {
+      $this->token = AppIdentityService::getAccessToken($scopes);
+      if ($this->token) {
+        $this->client->getCache()->set(
+            $cacheKey,
+            $this->token
+        );
+      }
+    }
+    $this->tokenScopes = $scopes;
+    return $this->token;
+  }
 
-	private $tokenScopes = false;
+  /**
+   * Perform an authenticated / signed apiHttpRequest.
+   * This function takes the apiHttpRequest, calls apiAuth->sign on it
+   * (which can modify the request in what ever way fits the auth mechanism)
+   * and then calls apiCurlIO::makeRequest on the signed request
+   *
+   * @param Google_Http_Request $request
+   * @return Google_Http_Request The resulting HTTP response including the
+   * responseHttpCode, responseHeaders and responseBody.
+   */
+  public function authenticatedRequest(Google_Http_Request $request)
+  {
+    $request = $this->sign($request);
+    return $this->client->getIo()->makeRequest($request);
+  }
 
-	public function __construct( Google_Client $client, $config = null ) {
-		$this->client = $client;
-	}
+  public function sign(Google_Http_Request $request)
+  {
+    if (!$this->token) {
+      // No token, so nothing to do.
+      return $request;
+    }
 
-	/**
-	 * Retrieve an access token for the scopes supplied.
-	 */
-	public function authenticateForScope( $scopes ) {
-		if ( $this->token && $this->tokenScopes == $scopes ) {
-			return $this->token;
-		}
-		
-		$cacheKey = self::CACHE_PREFIX;
-		if ( is_string( $scopes ) ) {
-			$cacheKey .= $scopes;
-		} else 
-			if ( is_array( $scopes ) ) {
-				$cacheKey .= implode( ":", $scopes );
-			}
-		
-		$this->token = $this->client->getCache()->get( $cacheKey );
-		if ( ! $this->token ) {
-			$this->token = AppIdentityService::getAccessToken( $scopes );
-			if ( $this->token ) {
-				$this->client->getCache()->set( $cacheKey, $this->token );
-			}
-		}
-		$this->tokenScopes = $scopes;
-		return $this->token;
-	}
+    $this->client->getLogger()->debug('App Identity authentication');
 
-	/**
-	 * Perform an authenticated / signed apiHttpRequest.
-	 * This function takes the apiHttpRequest, calls apiAuth->sign on it
-	 * (which can modify the request in what ever way fits the auth mechanism)
-	 * and then calls apiCurlIO::makeRequest on the signed request
-	 *
-	 * @param Google_Http_Request $request
-	 * @return Google_Http_Request The resulting HTTP response including the
-	 * responseHttpCode, responseHeaders and responseBody.
-	 */
-	public function authenticatedRequest( Google_Http_Request $request ) {
-		$request = $this->sign( $request );
-		return $this->client->getIo()->makeRequest( $request );
-	}
+    // Add the OAuth2 header to the request
+    $request->setRequestHeaders(
+        array('Authorization' => 'Bearer ' . $this->token['access_token'])
+    );
 
-	public function sign( Google_Http_Request $request ) {
-		if ( ! $this->token ) {
-			// No token, so nothing to do.
-			return $request;
-		}
-		
-		$this->client->getLogger()->debug( 'App Identity authentication' );
-		
-		// Add the OAuth2 header to the request
-		$request->setRequestHeaders( array( 'Authorization' => 'Bearer ' . $this->token['access_token'] ) );
-		
-		return $request;
-	}
+    return $request;
+  }
 }
