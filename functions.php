@@ -16,7 +16,7 @@ function gads_dash_safe_get($key)
 
 function gads_dash_pretty_error($e)
 {
-    return '<p>' . esc_html($e->getMessage()) . '</p><p>' . __('For further help and support go to', 'gads-dash') . ' <a href="http://deconf.com/ask/" target="_blank">' . __("Deconf Help Center", 'gads-dash') . '</a></p>';
+    return '<p>' . esc_html($e->getMessage()) . '</p><p>' . __('For further help and support go to', 'google-adsense-dashboard-for-wp') . ' <a href="https://wordpress.org/support/plugin/google-adsense-dashboard-for-wp" target="_blank">' . __("Support Forums", 'google-adsense-dashboard-for-wp') . '</a></p>';
 }
 
 class AdSenseAuth
@@ -31,12 +31,12 @@ class AdSenseAuth
     public function __construct()
     {
         require 'autoload.php';
-        
+
         $this->client = new Google_Client();
         $this->client->setAccessType('offline');
         $this->client->setApplicationName('Google Adsense Dashboard for WP');
         $this->client->setRedirectUri('urn:ietf:wg:oauth:2.0:oob');
-        
+
         if (get_option('gads_dash_userapi')) {
             $this->client->setClientId(get_option('gads_dash_clientid'));
             $this->client->setClientSecret(get_option('gads_dash_clientsecret'));
@@ -46,7 +46,7 @@ class AdSenseAuth
             $this->client->setClientSecret('B-LxlsVehit2CCzF5ke-SK6T');
             $this->client->setDeveloperKey('AIzaSyDH3q3w33uLpH4GN25CZqoWE_Nkcpk2UmY');
         }
-        
+
         $this->adSenseService = new Google_Service_AdSense($this->client);
     }
 
@@ -81,7 +81,7 @@ class AdSenseAuth
     {
         $this->user = $user;
         $token = $this->gads_dash_get_token();
-        
+
         if (isset($token)) {
             $this->client->setAccessToken($token);
         } else {
@@ -91,18 +91,18 @@ class AdSenseAuth
             $this->authUrl = $this->client->createAuthUrl();
             if (! isset($_REQUEST['gads_dash_authorize'])) {
                 if (! current_user_can('manage_options')) {
-                    _e("Ask an admin to authorize this Application", 'gads-dash');
+                    _e("Ask an admin to authorize this Application", 'google-adsense-dashboard-for-wp');
                     return;
                 }
-                
-                echo '<div style="padding:20px;">' . __("Use this link to get your access code:", 'gads-dash') . ' <a href="' . $this->authUrl . '" target="_blank">' . __("Get Access Code", 'gads-dash') . '</a>';
+
+                echo '<div style="padding:20px;">' . __("Use this link to get your access code:", 'google-adsense-dashboard-for-wp') . ' <a href="' . $this->authUrl . '" target="_blank">' . __("Get Access Code", 'google-adsense-dashboard-for-wp') . '</a>';
                 echo '<form name="input" action="#" method="POST">
-							<p><b>' . __("Access Code:", 'gads-dash') . ' </b><input type="text" name="gads_dash_code" value="" size="35"></p>
-							<input type="submit" class="button button-primary" name="gads_dash_authorize" value="' . __("Save Access Code", 'gads-dash') . '"/>
+							<p><b>' . __("Access Code:", 'google-adsense-dashboard-for-wp') . ' </b><input type="text" name="gads_dash_code" value="" size="35"></p>
+							<input type="submit" class="button button-primary" name="gads_dash_authorize" value="' . __("Save Access Code", 'google-adsense-dashboard-for-wp') . '"/>
 						</form>
 					</div>';
                 return;
-            } else 
+            } else
                 if (isset($_REQUEST['gads_dash_code'])) {
                     $this->client->authenticate($_REQUEST['gads_dash_code']);
                     $this->gads_dash_store_token($this->user, $this->client->getAccessToken());

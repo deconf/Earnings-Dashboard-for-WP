@@ -3,12 +3,12 @@ Contributors: deconf
 Donate link: https://deconf.com/donate/
 Tags: adsense, google, dashboard, google adsense, google adsense dashboard, adsense dashboard, earnings
 Requires at least: 2.8
-Tested up to: 4.9.7
-Stable tag: 2.2.1
+Tested up to: 5.0
+Stable tag: 2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Earnings Dashboard will display your Google Adsense revenue and related reports inside your WordPress Blog, on your Administration Dashboard.
+Earnings Dashboard will display your Google Adsense revenue and related reports inside your WordPress Administration Dashboard.
 
 == Description ==
 
@@ -32,10 +32,10 @@ Using a widget, [Earnings Dashboard](https://deconf.com/earnings-dashboard-googl
 
 Using this plugin your data is collected in a fast and secure manner because Earnings Dashboard uses OAuth2 protocol and Google Adsense API.
 
-= Further reading and info =
+= Further reading =
 
-* My [Earnings Dashboard](https://deconf.com/earnings-dashboard-google-adsense-wordpress/) homepage
-* Other [WordPress Plugins](https://deconf.com/wordpress/) by same author
+* [Search Engine Insights](https://wordpress.org/plugins/search-engine-insights/) - The perfect tool for viewing Google Search Console stats in your WordPress dashboard.
+* Other [WordPress Plugins](https://deconf.com/wordpress/) by the same author
 
 == Installation ==
 
@@ -68,6 +68,9 @@ A dedicated section for Wordpress Plugins is available here: [Wordpress Plugins 
 This plugin it's released under the GPLv2, you can use it free of charge on your personal or commercial website.
 
 == Changelog ==
+= v2.3 =
+* Bug Fixes:
+	* multiple text domain fixes for i18n
 
 = v2.2.1 =
 - Enhancement: GAPI library update
